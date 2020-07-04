@@ -127,6 +127,11 @@ table {
 
 /* CSS Reset End */
 
+@font-face {
+  font-family: '' nyt-franklin '';
+  src: url('./nyt-franklin.ttf') format('truetype'), /* Safari, Android, iOS */;
+}
+
 html {
   color: #444;
   font-family: Cambria, Cochin, Georgia, 'Times New Roman', Times, serif;
@@ -138,6 +143,7 @@ img {
 }
 
 /* Nav Bar Start */
+
 nav {
   width: 100%;
   display: flex;
@@ -176,7 +182,7 @@ a {
 
 #brand {
   font-size: 14.25px;
-  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
   font-weight: 700;
   text-size-adjust: 100%;
   text-transform: uppercase;
@@ -204,7 +210,7 @@ a {
 
 .nav-button {
   cursor: pointer;
-  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
   white-space: nowrap;
   vertical-align: middle;
   background-color: rgb(86, 123, 149);
@@ -235,12 +241,16 @@ a {
 
 article {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
+  column-gap: 50px;
   grid-template-areas:
-    '. . . header header header header . . .'
-    '. figure figure figure figure figure figure figure figure  .'
-    '. . . main main main main . . .';
+    '. . . . header header header header . . . .'
+    '. . figure figure figure figure figure figure figure figure . .'
+    '. . . article-part1 article-part1 article-part1 article-part1 article-part1 article-part1  editor-picks editor-picks .'
+    '. . . article-part2 article-part2 article-part2 article-part2 article-part2 article-part2  . . .'
+    '. . theory theory theory theory theory theory theory theory . .'
+    '. . . article-part3 article-part3 article-part3 article-part3 article-part3 article-part3  . . .';
 }
 
 /* Header Start */
@@ -305,8 +315,17 @@ figcaption {
 
 /* Article Start */
 
-main {
-  grid-area: main;
+#article-part1 {
+  grid-area: article-part1;
+}
+
+#article-part2 {
+  grid-area: article-part2;
+}
+
+#article-part3 {
+  margin-top: 5%;
+  grid-area: article-part3;
 }
 
 /* Article Details Start */
@@ -314,7 +333,7 @@ main {
 #author {
   color: rgb(51, 51, 51);
   display: inline-block;
-  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
   font-size: 15px;
   font-stretch: 100%;
   font-style: normal;
@@ -339,7 +358,7 @@ main {
 #date {
   color: rgb(51, 51, 51);
   display: inline-block;
-  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
   font-size: 13px;
   font-stretch: 100%;
   font-style: normal;
@@ -422,8 +441,10 @@ main {
   margin-bottom: 13px;
 }
 
+/* Sign Up Ad Start */
+
 #unlock-more {
-  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
   font-size: 15px;
   font-stretch: 100%;
   font-style: normal;
@@ -440,7 +461,7 @@ main {
 #signup {
   color: rgb(50, 104, 145);
   cursor: pointer;
-  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
   font-size: 15px;
   font-stretch: 100%;
   font-style: normal;
@@ -456,15 +477,6 @@ main {
   text-decoration-style: solid;
   text-size-adjust: 100%;
   vertical-align: baseline;
-}
-
-#signup:after {
-  content: '';
-  background: rgb(204, 204, 204);
-  width: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 #ad:after,
@@ -486,4 +498,270 @@ main {
   margin-top: 30px;
 }
 
+/* Sign Up Ad End */
+
+/* Editor Picks Start */
+
+.editor-picks-div {
+  grid-area: editor-picks;
+  grid-row-start: 4;
+  font-family: 'nyt-franklin', helvetica, arial, sans-serif;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  margin-top: -200px;
+  margin-bottom: -15px;
+  padding-bottom: 12px;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+}
+
+.editor-picks-headline:after {
+  display: block;
+  text-align: center;
+  content: '';
+  width: 60%;
+  margin-top: 12px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  height: 1px;
+  background: rgb(226, 226, 226);
+}
+
+.picks {
+  display: grid;
+  grid-template-columns: auto 3fr;
+  gap: 15px 10px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'pick1-image pick1-text'
+    'pick2-image pick2-text'
+    'pick3-image pick3-text';
+}
+
+.picks-image {
+  width: 75px;
+}
+
+.pick1-image {
+  grid-area: pick1-image;
+}
+
+.pick1-text {
+  grid-area: pick1-text;
+}
+.pick2-image {
+  grid-area: pick2-image;
+}
+
+.pick2-text {
+  grid-area: pick2-text;
+}
+.pick3-image {
+  grid-area: pick3-image;
+}
+
+.pick3-text {
+  grid-area: pick3-text;
+}
+
+.picks-text {
+  align-self: center;
+  color: rgb(51, 51, 51);
+  display: block;
+  font-family: nyt-cheltenham-small, georgia, 'times new roman';
+  font-size: 14px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 500;
+  line-height: 17px;
+  width: 125px;
+}
+
+.picks-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Editor Picks End */
+
+h2 {
+  color: rgb(51, 51, 51);
+  font-family: nyt-imperial, georgia, 'times new roman', times, serif;
+  font-size: 20px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 700;
+  height: auto;
+  line-height: 30px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+/* Inflation Theory Start */
+
+#theory-div {
+  grid-area: theory;
+  display: grid;
+  margin-top: 20px;
+  grid-template-areas: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'theory-headline theory-headline theory-headline .'
+    'theory-subtext theory-subtext theory-subtext theory-subtext'
+    'theory-picture theory-picture theory-picture theory-picture'
+    'theory-text1 theory-text2 theory-text3 theory-text4'
+    'theory-text5 theory-text6 theory-text7 theory-text8'
+    'theory-authors theory-authors theory-authors theory-authors';
+}
+
+#theory-headline {
+  grid-area: theory-headline;
+  color: rgb(0, 0, 0);
+  font-family: nyt-cheltenham, georgia, 'times new roman', times, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 5px;
+  margin-left: 1%;
+}
+
+#theory-subtext {
+  grid-area: theory-subtext;
+  color: rgb(102, 102, 102);
+  font-family: nyt-cheltenham-sh, georgia, 'times new roman', times, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 10px;
+  margin-left: 1%;
+}
+
+#theory-picture {
+  grid-area: theory-picture;
+}
+
+.theory-paragraph-start {
+  color: rgb(0, 0, 0);
+  display: inline;
+  font-family: 'nyt-franklin', arial, helvetica, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.55px;
+  line-height: 17px;
+  text-size-adjust: 100%;
+}
+
+.theory-text-row1 {
+  margin-left: 4%;
+  margin-top: -180%;
+  grid-row-start: 3;
+  color: rgb(0, 0, 0);
+  display: block;
+  font-family: 'nyt-franklin', arial, helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  height: 120px;
+  line-height: 17px;
+  text-size-adjust: 100%;
+  width: 228px;
+}
+
+.theory-text-row2 {
+  margin-left: 4%;
+  margin-top: -60%;
+  grid-row-start: 3;
+  color: rgb(0, 0, 0);
+  display: block;
+  font-family: 'nyt-franklin', arial, helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  height: 120px;
+  line-height: 17px;
+  text-size-adjust: 100%;
+  width: 228px;
+}
+
+#theory-text1 {
+  grid-area: theory-text1;
+}
+#theory-text2 {
+  grid-area: theory-text2;
+}
+#theory-text3 {
+  grid-area: theory-text3;
+}
+#theory-text4 {
+  grid-area: theory-text4;
+}
+
+#theory-text5 {
+  grid-area: theory-text5;
+}
+#theory-text6 {
+  grid-area: theory-text6;
+}
+#theory-text7 {
+  grid-area: theory-text7;
+}
+#theory-text8 {
+  grid-area: theory-text8;
+}
+
+#theory-text5:after {
+  display: block;
+  text-align: center;
+  content: '';
+  width: 30%;
+  margin-top: 30px;
+  height: 1px;
+  background: black;
+}
+
+#theory-authors {
+  margin-left: 1%;
+  margin-top: 4%;
+  grid-area: theory-authors;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  height: 18px;
+  line-height: 18px;
+}
+
+/* Inflation Theory End */
+
+iframe {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+#video-credit {
+  color: rgb(136, 136, 136);
+  font-family: nyt-imperial, georgia, 'times new roman', times, serif;
+  font-size: 13px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+  height: 1px;
+  letter-spacing: 0.13px;
+  line-height: 18px;
+}
 /* Article Text End */
