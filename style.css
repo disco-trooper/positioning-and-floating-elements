@@ -250,7 +250,9 @@ article {
     '. . . article-part1 article-part1 article-part1 article-part1 article-part1 article-part1  editor-picks editor-picks .'
     '. . . article-part2 article-part2 article-part2 article-part2 article-part2 article-part2  . . .'
     '. . theory theory theory theory theory theory theory theory . .'
-    '. . . article-part3 article-part3 article-part3 article-part3 article-part3 article-part3  . . .';
+    '. . . article-part3 article-part3 article-part3 article-part3 article-part3 article-part3  . . .'
+    '. . telescope-div telescope-div telescope-div telescope-div telescope-div telescope-div telescope-div telescope-div . .'
+    '. . . article-part4 article-part4 article-part4 article-part4 article-part4 article-part4  . . .';
 }
 
 /* Header Start */
@@ -764,4 +766,122 @@ iframe {
   letter-spacing: 0.13px;
   line-height: 18px;
 }
+
+#telescope-div {
+  grid-area: telescope-div;
+  margin-top: 25px;
+}
+
+#telescope-credit {
+  color: rgb(136, 136, 136);
+  display: inline;
+  font-family: nyt-imperial, georgia, 'times new roman', times, serif;
+  font-size: 13px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+}
+
+#article-part4 {
+  grid-area: article-part4;
+}
+
+#article-bottom-info {
+  color: rgb(102, 102, 102);
+  display: block;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-size: 12px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+  height: 32px;
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+
+.article-bottom-interactive {
+  text-decoration: underline;
+}
+
+.article-bottom-interactive:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#read-comments-button {
+  background-color: rgb(86, 123, 149);
+  border-bottom-color: rgb(50, 104, 145);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(50, 104, 145);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: rgb(50, 104, 145);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: rgb(50, 104, 145);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 600;
+  height: 36px;
+  letter-spacing: 0.65px;
+  line-height: 24px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 25%;
+  margin-top: 0px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 5px;
+  text-align: center;
+  text-indent: 0px;
+  text-rendering: auto;
+  text-shadow: none;
+  text-size-adjust: 100%;
+  text-transform: uppercase;
+  transition-delay: 0s;
+  transition-duration: 0.6s;
+  transition-property: rgb(50, 104, 145);
+  transition-timing-function: ease;
+  width: 330px;
+  word-spacing: 0px;
+  writing-mode: horizontal-tb;
+  -webkit-appearance: none;
+}
+
+#read-comments-button:hover {
+  background-color: rgb(50, 104, 145);
+}
+
 /* Article Text End */
