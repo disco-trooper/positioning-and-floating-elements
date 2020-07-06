@@ -252,7 +252,8 @@ article {
     '. . theory theory theory theory theory theory theory theory . .'
     '. . . article-part3 article-part3 article-part3 article-part3 article-part3 article-part3  . . .'
     '. . telescope-div telescope-div telescope-div telescope-div telescope-div telescope-div telescope-div telescope-div . .'
-    '. . . article-part4 article-part4 article-part4 article-part4 article-part4 article-part4  . . .';
+    '. . . article-part4 article-part4 article-part4 article-part4 article-part4 article-part4  . . .'
+    '. more-articles more-articles more-articles more-articles more-articles more-articles more-articles more-articles more-articles more-articles .';
 }
 
 /* Header Start */
@@ -885,3 +886,101 @@ iframe {
 }
 
 /* Article Text End */
+
+#more-articles {
+  grid-area: more-articles;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+}
+
+#more-in-space {
+  display: grid;
+  border-top: 1px solid black;
+  padding-top: 15px;
+  margin-top: 60px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 20px;
+  grid-template-areas: 'more-in-space-headline more-in-space-headline more-in-space-headline';
+}
+
+#more-in-space-headline {
+  grid-area: more-in-space-headline;
+  margin-bottom: 15px;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+#more-in-space-headline:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.more-credit {
+  color: rgb(153, 153, 153);
+  font-family: nyt-cheltenham-small, georgia, 'times new roman';
+  font-size: 10px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 400;
+  height: 12px;
+  line-height: 12.3px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 3px;
+  padding-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  text-align: right;
+  text-size-adjust: 100%;
+  text-transform: none;
+  vertical-align: baseline;
+}
+
+.more-image-headline {
+  color: rgb(18, 18, 18);
+  font-family: nyt-cheltenham, georgia, 'times new roman', times, serif;
+  font-size: 18px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 500;
+  height: 44px;
+  line-height: 22px;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  margin-bottom: 0px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  text-align: left;
+  text-size-adjust: 100%;
+}
+
+.more-image-headline:hover {
+  color: rgb(102, 102, 102);
+}
