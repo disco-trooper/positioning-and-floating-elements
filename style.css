@@ -179,6 +179,10 @@ img {
   max-width: 100%;
 }
 
+.pointer:hover {
+  cursor: pointer;
+}
+
 /* Nav Bar Start */
 
 nav {
