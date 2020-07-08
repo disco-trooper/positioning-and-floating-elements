@@ -2,7 +2,7 @@
   "name": "positioning-and-floating-elements",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/disco-trooper/positioning-and-floating-elements.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "disco-trooper",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/disco-trooper/positioning-and-floating-elements/issues"
   },
