@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> A simple New York Times clone made for positioning and layout practice purposes
+> A simple New York Times clone made for positioning and layout practice purposes. Project made as a part of [The Odin Project's curriculum](https://www.theodinproject.com/courses/html-and-css/lessons/positioning-and-floating-elements).
 
 ### ✨ [Demo](https://disco-trooper.github.io/positioning-and-floating-elements/)
 
